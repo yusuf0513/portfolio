@@ -1,0 +1,405 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   3D Portfolio - Job Application
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      perspective: 1500px;
+      background: #0f172a;
+      color: #e0e7ff;
+    }
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+    .card-3d:hover {
+      transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.6);
+    }
+    .card-3d:active {
+      transform: rotateY(0deg) rotateX(0deg) scale(0.95);
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+    }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-indigo-900 shadow-lg sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a class="text-3xl font-bold text-indigo-400 tracking-wide select-none" href="#">
+     Portfolio
+    </a>
+    <ul class="hidden md:flex space-x-8 text-indigo-200 font-medium">
+     <li>
+      <a class="hover:text-indigo-400 transition" href="#about">
+       About Me
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-indigo-400 transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-indigo-400 transition" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-indigo-400 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button class="md:hidden text-indigo-300 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-2x">
+     </i>
+    </button>
+   </div>
+   <div class="hidden md:hidden bg-indigo-800" id="mobile-menu">
+    <ul class="flex flex-col space-y-3 px-6 py-4 text-indigo-200 font-medium">
+     <li>
+      <a class="block hover:text-indigo-400 transition" href="#about">
+       About Me
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-indigo-400 transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-indigo-400 transition" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-indigo-400 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="flex-grow flex flex-col justify-center items-center text-center px-6 py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700">
+   <h1 class="text-5xl md:text-6xl font-extrabold text-indigo-300 mb-4 tracking-wide select-none">
+    Hi, I'm Muh Yusuf
+   </h1>
+   <p class="text-indigo-200 max-w-3xl text-lg md:text-xl mb-8">
+    someone who has more than 10 years of experience in the field of internet networks, who will help you to create and organize systematic and structured internet network projects.
+   </p>
+   <a class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition transform hover:scale-105" href="#projects">
+    View My Work
+   </a>
+  </header>
+  <!-- About Me Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="about">
+   <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
+    About Me
+   </h2>
+   <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+    <div class="flex-shrink-0 w-64 h-64 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 card-3d">
+     <img alt="Portrait of a young 3D artist with creative lighting and a futuristic background" class="w-full h-full object-cover" height="400" loading="lazy" src="portfolio2.jpg" width="400"/>
+    </div>
+    <div class="text-indigo-200 max-w-xl space-y-6 text-lg leading-relaxed">
+     <p>
+      I have more than 10 years of experience in the development of internet networks using fiber optic technology. Throughout my career, I have been involved in a wide range of projects covering planning, technical design, cost estimation, and on-site implementation. My expertise includes cost planning, technical drawings using AutoCAD, digital mapping with KML format, and high-standard fiber optic splicing.
+     </p>
+     <p>
+      I am experienced in leading project teams, managing project timelines, and ensuring quality standards are met according to technical requirements and client expectations.
+     </p>
+     <a class="inline-block mt-4 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition transform hover:scale-105" href="#contact">
+      Get in Touch
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Projects Section -->
+  <section class="bg-indigo-900 py-20 px-6" id="projects">
+   <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
+    My Projects
+   </h2>
+   <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="3D render of a futuristic cityscape with neon lights and flying cars at night" class="w-full h-48 object-cover" height="400" loading="lazy" src="Underpass.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       internet network security
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       During road construction, I made plans to secure and move internet network cables, so that there would be no impact on internet interference from road construction.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/futuristic-city" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="Realistic 3D model of a sports car with metallic paint and detailed reflections" class="w-full h-48 object-cover" height="400" loading="lazy" src="kml.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       Digital Mapping of Fiber Optic Lines Using KML & GIS
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       Description: Documentation and digitization of optical cable lines for asset inventory purposes.
+
+Role: GIS & Documentation Engineer
+
+Main Duties:
+
+Create fiber optic line maps using Google Earth (KML format).
+
+Integrate data into the company's GIS system.
+
+Provide path visualization to facilitate network maintenance.
+
+Result: Well-documented network path data, reducing troubleshooting time by up to 40%.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/sports-car" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="Animated 3D character model in an action pose with dynamic lighting and shadows" class="w-full h-48 object-cover" height="400" loading="lazy" src="jaringan.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       Urban Fiber Optic Network Planning & Implementation
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       Description: FTTH (Fiber to the Home) network infrastructure development project in a densely populated urban area.
+
+Role: Project Leader
+
+Main Duties:
+
+Develop backbone network design using AutoCAD.
+
+Create fiber optic path maps using KML (Google Earth).
+
+Calculate detailed cost estimates (RAB) for cable deployment, materials, and labor.
+
+Lead the technical team for splicing, OTDR measurements, and network quality testing.
+
+Result: Installed network with a capacity of 10 Gbps, covering over 2,000 customers.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/character-animation" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="3D interior design of a modern living room with stylish furniture and natural lighting" class="w-full h-48 object-cover" height="400" loading="lazy" src="project.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       Fiber Optic Network Splicing & Testing Project for Data Center
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       Description: Fiber optic splicing for connectivity between Tier-3 Data Centers.
+
+Role: Fiber Optic Specialist
+
+Main Duties:
+
+Perform fiber optic splicing using low-loss fusion splicing standards.
+
+Conduct network quality testing using an OTDR and Power Meter.
+
+Prepare technical reports on measurement results for the client.
+
+Result: The network was successfully tested with a loss below 0.3 dB per connection, in accordance with international standards.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/interior-design" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="3D product visualization of a modern smartphone with reflective screen and sleek design" class="w-full h-48 object-cover" height="400" loading="lazy" src="FTTH.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       FTTH Project Design & Cost Estimation in a Residential Area
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       Description: Planning and cost estimation of an FTTH network for 500 new housing units.
+
+Role: Network Planner & Estimator
+
+Main Duties:
+
+Draft technical designs for distribution and access networks using AutoCAD.
+
+Prepare a complete cost estimate (RAB) covering cables, ODFs, splitters, manholes, and installation work.
+
+Provide design documentation and cable route mapping in KML format.
+
+Result: Project proposal approved by client with a total investment of approximately IDR 2.5 billion.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/product-visualization" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+    <article class="bg-indigo-800 rounded-3xl shadow-lg overflow-hidden card-3d cursor-pointer hover:shadow-indigo-500/70 transition-shadow duration-300">
+     <img alt="3D environment of a fantasy forest scene with glowing plants and mystical atmosphere" class="w-full h-48 object-cover" height="400" loading="lazy" src="supervisi.jpeg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-indigo-200 mb-2">
+       Field Supervision for Intercity Fiber Optic Backbone Project
+      </h3>
+      <p class="text-indigo-300 text-sm leading-relaxed">
+       Description: Deployment of 150 km of fiber optic cable for intercity backbone.
+
+Role: Site Supervisor
+
+Main Duties:
+
+Manage field teams for aerial and underground cable deployment.
+
+Ensure installation quality standards are adhered to procedures (bending radius, joint closure, etc.).
+
+Produce daily reports and project progress for central management.
+
+Result: Project completed 10 days ahead of schedule, with quality in accordance with technical specifications.
+      </p>
+      <a class="inline-block mt-4 text-indigo-400 hover:text-indigo-200 font-semibold" href="https://github.com/alexmorgan/fantasy-forest" rel="noopener" target="_blank">
+       View on GitHub
+       <i class="fas fa-external-link-alt ml-1">
+       </i>
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Skills Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="skills">
+   <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
+    Skills &amp; Tools
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10 max-w-5xl mx-auto text-center">
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Blender software logo, orange and white stylized swirl" class="mx-auto mb-4" height="80" loading="lazy" src="fusion-splicing.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      Fusion Splicing
+     </p>
+    </div>
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Autodesk Maya software logo, stylized blue M letter" class="mx-auto mb-4" height="80" loading="lazy" src="logo_qgis.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      Qgis
+     </p>
+    </div>
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Substance Painter software logo, orange hexagon with white S letter" class="mx-auto mb-4" height="80" loading="lazy" src="autocad.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      AutoCAD
+     </p>
+    </div>
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Adobe Photoshop software logo, blue square with Ps letters" class="mx-auto mb-4" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eb1e3443-72ca-416e-c312-fc993b4d0b61.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      Photoshop
+     </p>
+    </div>
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Unity game engine logo, black stylized cube" class="mx-auto mb-4" height="80" loading="lazy" src="otdr.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      OTDR
+     </p>
+    </div>
+    <div class="card-3d p-6 bg-indigo-800 rounded-3xl shadow-lg hover:shadow-indigo-500/70 transition-shadow duration-300 cursor-default">
+     <img alt="Three.js JavaScript 3D library logo, stylized black and white 3D cube" class="mx-auto mb-4" height="80" loading="lazy" src="vscode.jpg" width="80"/>
+     <p class="text-indigo-200 font-semibold">
+      VScode
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="bg-indigo-900 py-20 px-6" id="contact">
+   <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
+    Contact Me
+   </h2>
+   <div class="max-w-3xl mx-auto bg-indigo-800 rounded-3xl shadow-lg p-10 card-3d">
+    <form action="https://formspree.io/f/{form_id}" class="space-y-6" enctype="text/plain" method="POST">
+     <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="name">
+       Name
+      </label>
+      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="message">
+       Message
+      </label>
+      <textarea class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+     </div>
+     <button class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg shadow-lg transition transform hover:scale-105" type="submit">
+      Send Message
+     </button>
+    </form>
+    <div class="mt-10 text-indigo-300 text-center space-y-4">
+     <p>
+      <i class="fas fa-phone-alt mr-2">
+      </i>
+      +(62)8211-1406-422
+     </p>
+     <p>
+      <i class="fas fa-envelope mr-2">
+      </i>
+      yusufmuh27@gmail.com
+     </p>
+     <p>
+      <a class="hover:text-indigo-400 transition" href="https://linkedin.com/in/alexmorgan" rel="noopener" target="_blank">
+       <i class="fab fa-linkedin fa-lg mr-2">
+       </i>
+       LinkedIn
+      </a>
+      |
+      <a class="hover:text-indigo-400 transition ml-2" href="https://github.com/alexmorgan" rel="noopener" target="_blank">
+       <i class="fab fa-github fa-lg mr-2">
+       </i>
+       GitHub
+      </a>
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-indigo-900 py-6 text-center text-indigo-400 select-none">
+   © 2025 Muh Yusuf. All rights reserved.
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
