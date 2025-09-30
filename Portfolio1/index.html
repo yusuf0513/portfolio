@@ -338,20 +338,18 @@ Result: Project completed 10 days ahead of schedule, with quality in accordance 
    <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
     Contact Me
    </h2>
-   <div class="max-w-3xl mx-auto bg-indigo-800 rounded-3xl shadow-lg p-10 card-3d">
-    <form action="https://formspree.io/f/mwpronze" class="space-y-6" enctype="text/plain" method="POST">
-     <div>
-      <label class="block text-indigo-200 font-semibold mb-2" for="name">
-       Name
-      </label>
-      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="name" name="name" placeholder="Your full name" required="" type="text"/>
-     </div>
-     <div>
-      <label class="block text-indigo-200 font-semibold mb-2" for="email">
-       Email
-      </label>
-      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
-     </div>
+  <form action="https://formspree.io/f/mwpronze" method="POST">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="message">Message</label>
+  <textarea name="message" id="message" required></textarea>
+
+  <button type="submit">Send Message</button>
+   
      <div>
       <label class="block text-indigo-200 font-semibold mb-2" for="message">
        Message
@@ -403,4 +401,5 @@ Result: Project completed 10 days ahead of schedule, with quality in accordance 
   </script>
  </body>
 </html>
+
 
