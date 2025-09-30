@@ -338,31 +338,58 @@ Result: Project completed 10 days ahead of schedule, with quality in accordance 
    <h2 class="text-4xl font-bold text-indigo-300 mb-12 text-center select-none">
     Contact Me
    </h2>
-   <div class="max-w-3xl mx-auto bg-indigo-800 rounded-3xl shadow-lg p-10 card-3d">
-    <form action="https://formspree.io/f/{form_id}" class="space-y-6" enctype="text/plain" method="POST">
-     <div>
-      <label class="block text-indigo-200 font-semibold mb-2" for="name">
-       Name
-      </label>
-      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="name" name="name" placeholder="Your full name" required="" type="text"/>
-     </div>
-     <div>
-      <label class="block text-indigo-200 font-semibold mb-2" for="email">
-       Email
-      </label>
-      <input class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
-     </div>
-     <div>
-      <label class="block text-indigo-200 font-semibold mb-2" for="message">
-       Message
-      </label>
-      <textarea class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
-     </div>
-     <button class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg shadow-lg transition transform hover:scale-105" type="submit">
-      Send Message
-     </button>
-    </form>
-    <div class="mt-10 text-indigo-300 text-center space-y-4">
+  <div class="max-w-3xl mx-auto bg-indigo-800 rounded-3xl shadow-lg p-10 card-3d">
+  <form id="contact-form" action="https://formspree.io/f/mwpronze" method="POST" class="space-y-6">
+    <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="name">Name</label>
+      <input
+        class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        id="name" name="name" type="text" placeholder="Your full name" required />
+    </div>
+    <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="email">Email</label>
+      <input
+        class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        id="email" name="email" type="email" placeholder="your.email@example.com" required />
+    </div>
+    <div>
+      <label class="block text-indigo-200 font-semibold mb-2" for="message">Message</label>
+      <textarea
+        class="w-full rounded-lg px-4 py-3 bg-indigo-700 text-indigo-100 placeholder-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </div>
+    <button
+      class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg shadow-lg transition transform hover:scale-105"
+      type="submit">Send Message</button>
+  </form>
+
+  <p id="success-message" class="text-green-300 font-semibold mt-4" style="display:none;">✅ Your message has been sent successfully!</p>
+</div>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("success-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+      } else {
+        alert("❌ Failed to send message. Please try again later.");
+      }
+    });
+  });
+</script>
+
      <p>
       <i class="fas fa-phone-alt mr-2">
       </i>
@@ -403,3 +430,4 @@ Result: Project completed 10 days ahead of schedule, with quality in accordance 
   </script>
  </body>
 </html>
+
